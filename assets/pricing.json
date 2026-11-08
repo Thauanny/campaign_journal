@@ -1,0 +1,20 @@
+{
+  "_aviso": "ESTIMATIVAS em USD por 1 milhão de tokens. Preços e planos gratuitos mudam: confira nas tabelas oficiais e edite em Configurações > Tabela de preços.",
+  "models": {
+    "claude-haiku-5-5":   {"provider": "claude", "in": 1.0,  "out": 5.0,  "tier": "balanced"},
+    "claude-sonnet-5-5":  {"provider": "claude", "in": 3.0,  "out": 15.0, "tier": "balanced"},
+    "claude-fable-5-1":   {"provider": "claude", "in": 15.0, "out": 75.0, "tier": "premium"},
+    "gpt-4o-mini":        {"provider": "openai", "in": 0.15, "out": 0.60, "tier": "balanced"},
+    "gpt-4o":             {"provider": "openai", "in": 2.5,  "out": 10.0, "tier": "premium"},
+    "gemini-2.5-flash":   {"provider": "gemini", "in": 0.30, "out": 2.5,  "tier": "balanced"},
+    "gemini-2.5-pro":     {"provider": "gemini", "in": 1.25, "out": 10.0, "tier": "premium"}
+  },
+  "audio_per_minute_usd": {"whisper-1": 0.006, "gemini": 0.002},
+  "free_tier": {
+    "gemini": {"note": "Camada gratuita do Gemini API tem limites de requisições/dia e pode usar seus dados para treino. Verifique as regras atuais."}
+  },
+  "defaults": {
+    "balanced": {"claude": "claude-sonnet-5-5", "openai": "gpt-4o-mini", "gemini": "gemini-2.5-flash"},
+    "premium":  {"claude": "claude-fable-5-1",  "openai": "gpt-4o",      "gemini": "gemini-2.5-pro"}
+  }
+}
